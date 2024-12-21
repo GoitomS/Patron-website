@@ -1,0 +1,13 @@
+/* Footer.module.css */
+.footer {
+    background-image: url('../../public/footer-bg.svg');
+    /* Make sure to update the path to your SVG file */
+    background-size: cover;
+    background-color: "#081334";
+    /* Adjust as needed */
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px 40px 10px 40px;
+    color: white;
+    text-align: center;
+}
