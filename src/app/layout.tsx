@@ -4,6 +4,7 @@ import "./globals.css";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Chat from "@/components/Chat";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -22,12 +23,18 @@ export const metadata: Metadata = {
 export default function RootLayout(props) {
   return (
     <html lang="en">
+      <head>
+      <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;1,100&family=Space+Mono&family=Tapestry&family=Work+Sans:wght@400;500;800&display=swap" rel="stylesheet"/>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <AppRouterCacheProvider>
         <Navbar/>
            {props.children}
         <Footer/>
         </AppRouterCacheProvider>
+        <Chat />
       </body>
     </html>
   );

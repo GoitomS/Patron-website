@@ -10,10 +10,13 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from '@mui/icons-material/Mail';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import JoinOurNewsLetter from "./JoinOurNewsLetter";
 const Footer: React.FC = () => (
   <>
-    <Grid2></Grid2>
-    <Box component="footer" className={styles.footer}>
+    <Grid2>
+        <JoinOurNewsLetter/>
+    </Grid2>
+    <Box component="footer" className={styles.footer} sx={{paddingTop: "80px"}}>
       <Grid2 container spacing={4} justifyContent="center" mb={10}>
         <Grid2 display={"flex"} flexDirection={"column"} gap={1}>
           <Image
@@ -30,15 +33,15 @@ const Footer: React.FC = () => (
           <Typography
             fontWeight={"bold"}
             fontSize={"30px"}
-            sx={{ color: "#a1c73a", marginTop: "40px", textAlign: "left" }}
+            sx={{ color: "#A4DB08", marginTop: "40px", textAlign: "left" }}
           >
             We're here to help!
           </Typography>
           <Typography fontSize={"16px"} sx={{ color: "lightGrey", display: "flex", alignItems: "center" }}>
-            <MailIcon sx={{color: "#a1c73a", marginRight: "10px"}}/> help@patron-cx.com
+            <MailIcon sx={{color: "#A4DB08", marginRight: "10px"}}/> help@patron-cx.com
           </Typography>
           <Typography fontSize={"16px"} sx={{ color: "lightGrey", display: "flex", alignItems: "center" }}>
-            <LocalPhoneIcon sx={{color: "#a1c73a", marginRight: "10px"}}/> +1 (888) 123-4567
+            <LocalPhoneIcon sx={{color: "#A4DB08", marginRight: "10px"}}/> +1 (888) 123-4567
           </Typography>
 
           <Grid2 alignItems={"center"} gap={2} mt={2}>
@@ -152,7 +155,7 @@ const Footer: React.FC = () => (
       </Grid2>
 
       <Typography variant="body1" fontSize={12} sx={{margintop: "50px"}}>
-      © 2024 Your Company Name. All rights reserved.
+      © 2024 Patron LLC. All rights reserved.
     </Typography>
     </Box>
   </>
