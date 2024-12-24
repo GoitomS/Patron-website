@@ -15,7 +15,7 @@ export default function Home() {
       <main>
         <HeaderWithPicture/>
         <ProductTabsOnHomePage/>
-        <PatronCallToAction background="#A4DB08" majorText={`Simplify the way you connect with ${<span style={{color: "#081334"}}>Customers</span>}`}  minorText="Optimize your agents&apos; productivity and customer experience, while increasing customer retention and satisfaction." buttonText="Request a Demo" buttonLink="/" />
+        <PatronCallToAction background="#A4DB08" majorText={`Simplify the way you connect with Customers`}  minorText="Optimize your agents&apos; productivity and customer experience, while increasing customer retention and satisfaction." buttonText="Request a Demo" buttonLink="/" />
         <PictureAndDescriptionSection/>
         <ResourcesSection articles={articles}/>
       </main>

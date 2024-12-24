@@ -12,7 +12,7 @@ export const listOfMenus = {
     CC: [
       {
         name: "Business Phone",
-        link: "/product1",
+        link: "/employee-experience",
         description: "Seamlessly connect with clients and colleagues"
       },
       {
@@ -131,7 +131,7 @@ export const ProductsMenu = ({
   open,
   handleClose,
 }: ProductsMenuProps) => {
-  console.log(anchorEl);
+  
   return (
     <Dialog
       onClose={handleClose}
@@ -148,10 +148,10 @@ export const ProductsMenu = ({
     >
       <DialogContent>
       <Grid2 container spacing={2}>
-        <MenuList group={"CC"} listOfMenus={listOfMenus.CC}/>
-        <MenuList group={"CM"} listOfMenus={listOfMenus.CM}/>
-        <MenuList group={"Chat"} listOfMenus={listOfMenus.Chat}/>
-        <MenuList group={"CRM"} listOfMenus={listOfMenus.CRM}/>
+        <MenuList group={"CC"} listOfMenus={listOfMenus.CC} onClose={handleClose}/>
+        <MenuList group={"CM"} listOfMenus={listOfMenus.CM} onClose={handleClose}/>
+        <MenuList group={"Chat"} listOfMenus={listOfMenus.Chat} onClose={handleClose}/>
+        <MenuList group={"CRM"} listOfMenus={listOfMenus.CRM} onClose={handleClose}/>
       </Grid2>
         
       </DialogContent>

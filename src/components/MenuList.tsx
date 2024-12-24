@@ -15,7 +15,7 @@ return (
       </Grid2>
 )
 }
-const MenuList = ({ listOfMenus, group, service = false, isMobile = false }) => {
+const MenuList = ({ listOfMenus, group, service = false, isMobile = false, onClose }) => {
   return (
     <Grid2 container display={"flex"} flexDirection={"column"}>
       {!isMobile && <Grid2 pb={1} mb={2} display={"flex"} alignItems={"center"} gap={1} sx={{borderBottom: "1px solid lightGrey"}}>
@@ -25,7 +25,7 @@ const MenuList = ({ listOfMenus, group, service = false, isMobile = false }) => 
       {listOfMenus?.map((menu, index) => {
         return (
           <Grid2 key={index} my={1} width={250} px={1}>
-            <Link href={menu.link}>
+            <Link href={menu.link} onClick={onClose}>
               <Typography fontSize={14} fontWeight={"bold"}>{menu.name}</Typography>
               <Typography fontSize={12} sx={{ color: "lightGrey" }}>
                 {menu?.description}
