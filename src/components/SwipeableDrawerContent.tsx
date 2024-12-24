@@ -5,20 +5,27 @@ import {
   AccordionSummary,
   Grid2,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import MenuList, { MenuListHeader } from "./MenuList";
 import { listOfMenus } from "./ProductsMenu";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { listOfServiceMenus } from "./ServicesMenu";
 import Link from "next/link";
 
-const SwipeableDrawerContent = () => {
+const SwipeableDrawerContent = ({handleClose}) => {
   const [expanded, setExpanded] = React.useState<string | false>(false);
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false);
     };
+    const isMobile = useMediaQuery("(max-width: 900px)");
+    useEffect(()=>{
+      if(!isMobile){
+          handleClose()
+      }
+    }, [isMobile])
   return (
     <Grid2
       container
@@ -44,7 +51,7 @@ const SwipeableDrawerContent = () => {
           <MenuListHeader group={"CC"} />
         </AccordionSummary>
         <AccordionDetails>
-          <MenuList group={"CC"} listOfMenus={listOfMenus.CC} isMobile={true} />
+          <MenuList group={"CC"} listOfMenus={listOfMenus.CC} isMobile={true} handleClose={handleClose}/>
         </AccordionDetails>
       </Accordion>
       <Accordion
@@ -61,7 +68,7 @@ const SwipeableDrawerContent = () => {
           <MenuListHeader group={"CM"} />
         </AccordionSummary>
         <AccordionDetails>
-          <MenuList group={"CM"} listOfMenus={listOfMenus.CM} isMobile={true} />
+          <MenuList group={"CM"} listOfMenus={listOfMenus.CM} isMobile={true} handleClose={handleClose}/>
         </AccordionDetails>
       </Accordion>
       <Accordion
@@ -82,6 +89,7 @@ const SwipeableDrawerContent = () => {
             group={"Chat"}
             listOfMenus={listOfMenus.Chat}
             isMobile={true}
+            handleClose={handleClose}
           />
         </AccordionDetails>
       </Accordion>
@@ -103,6 +111,7 @@ const SwipeableDrawerContent = () => {
             group={"CRM"}
             listOfMenus={listOfMenus.CRM}
             isMobile={true}
+            handleClose={handleClose}
           />
         </AccordionDetails>
       </Accordion>
@@ -131,6 +140,7 @@ const SwipeableDrawerContent = () => {
             group={"Industry"}
             listOfMenus={listOfServiceMenus.Industry}
             isMobile={true}
+            handleClose={handleClose}
           />
         </AccordionDetails>
       </Accordion>
@@ -152,6 +162,7 @@ const SwipeableDrawerContent = () => {
             group={"Size"}
             listOfMenus={listOfServiceMenus.Industry}
             isMobile={true}
+            handleClose={handleClose}
           />
         </AccordionDetails>
       </Accordion>
@@ -173,6 +184,7 @@ const SwipeableDrawerContent = () => {
             group={"Events"}
             listOfMenus={listOfServiceMenus.Events}
             isMobile={true}
+            handleClose={handleClose}
           />
         </AccordionDetails>
       </Accordion>

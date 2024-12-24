@@ -6,7 +6,16 @@ import ExtensionIcon from "@mui/icons-material/Extension";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import ChatRoundedIcon from "@mui/icons-material/ChatRounded";
 import theme from "@/theme";
-
+interface MenuListProps {
+  listOfMenus: {
+    name: string;
+    link: string;
+    description: string;
+  }[];
+  group: string;
+  isMobile?: boolean;
+  handleClose?: () => void;
+}
 export const MenuListHeader = ({group, service = false}) => {
 return (
     <Grid2 pb={1} mb={2} display={"flex"} alignItems={"center"} gap={1} >
@@ -15,7 +24,7 @@ return (
       </Grid2>
 )
 }
-const MenuList = ({ listOfMenus, group, service = false, isMobile = false, onClose }) => {
+const MenuList = ({ listOfMenus, group, service = false, isMobile = false, handleClose }) => {
   return (
     <Grid2 container display={"flex"} flexDirection={"column"}>
       {!isMobile && <Grid2 pb={1} mb={2} display={"flex"} alignItems={"center"} gap={1} sx={{borderBottom: "1px solid lightGrey"}}>
@@ -25,7 +34,7 @@ const MenuList = ({ listOfMenus, group, service = false, isMobile = false, onClo
       {listOfMenus?.map((menu, index) => {
         return (
           <Grid2 key={index} my={1} width={250} px={1}>
-            <Link href={menu.link} onClick={onClose}>
+            <Link href={menu.link} onClick={handleClose}>
               <Typography fontSize={14} fontWeight={"bold"}>{menu.name}</Typography>
               <Typography fontSize={12} sx={{ color: "lightGrey" }}>
                 {menu?.description}

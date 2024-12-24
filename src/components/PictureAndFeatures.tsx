@@ -4,8 +4,14 @@ import React from "react";
 import PatronButton from "./PatronButton";
 import Image from 'next/image';
 import SvgIcon from "./SvgIcon";
-
-const PictureAndFeatures = ({features, imageSrc, altText, title }) => {
+interface PictureAndFeaturesProps {
+  features: string[];
+  imageSrc: string;
+  altText: string;
+  title: React.ReactNode;
+  pictureSide: 'left' | 'right';
+}
+const PictureAndFeatures = ({features, imageSrc, altText, title, pictureSide = 'left' }: PictureAndFeaturesProps) => {
   const isMobile = useMediaQuery("(max-width: 900px)");
   
   return (
@@ -13,19 +19,19 @@ const PictureAndFeatures = ({features, imageSrc, altText, title }) => {
       container
       display={"flex"}
       justifyContent={"center"}
-      p={4}
+      px={4}
       alignItems={"center"}
-      bgcolor={"#f9f9f9"}
+      bgcolor={pictureSide === "left" ? "#f9f9f9" : ""}
     >
       <Grid2
         py={10}
         container
-        sx={{ maxWidth: "850px" }}
+        sx={{ maxWidth: "950px" }}
         spacing={4}
         display={"flex"}
         alignItems={"flex-start"}
       >
-        <Grid2
+        {pictureSide === "left" && <Grid2
           size={{ xs: 12, md: 6 }}
           display={"flex"}
           justifyContent={isMobile ? "center" : "flex-end"}
@@ -37,7 +43,7 @@ const PictureAndFeatures = ({features, imageSrc, altText, title }) => {
       height={500} 
       style={{ objectFit: 'contain' }}
     />
-        </Grid2>
+        </Grid2>}
         <Grid2
           size={{ xs: 12, md: 6 }}
           display={"flex"}
@@ -89,6 +95,19 @@ const PictureAndFeatures = ({features, imageSrc, altText, title }) => {
             </Grid2>
           </Grid2>
         </Grid2>
+        {pictureSide === "right" && !isMobile &&  <Grid2
+          size={{ xs: 12, md: 6 }}
+          display={"flex"}
+          justifyContent={isMobile ? "center" : "flex-end"}
+        >
+          <Image 
+      src={imageSrc}
+      alt={altText}
+      width={400}
+      height={500} 
+      style={{ objectFit: 'contain' }}
+    />
+        </Grid2>}
       </Grid2>
     </Grid2>
   );

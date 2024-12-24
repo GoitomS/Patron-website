@@ -17,7 +17,7 @@ export const listOfMenus = {
       },
       {
         name: "Call Center Solution",
-        link: "/product2",
+        link: "/customer-experience-hub",
         description: "Deliver exceptional support & streamline operations"
       },
       {
@@ -148,10 +148,10 @@ export const ProductsMenu = ({
     >
       <DialogContent>
       <Grid2 container spacing={2}>
-        <MenuList group={"CC"} listOfMenus={listOfMenus.CC} onClose={handleClose}/>
-        <MenuList group={"CM"} listOfMenus={listOfMenus.CM} onClose={handleClose}/>
-        <MenuList group={"Chat"} listOfMenus={listOfMenus.Chat} onClose={handleClose}/>
-        <MenuList group={"CRM"} listOfMenus={listOfMenus.CRM} onClose={handleClose}/>
+        <MenuList group={"CC"} listOfMenus={listOfMenus.CC} handleClose={handleClose}/>
+        <MenuList group={"CM"} listOfMenus={listOfMenus.CM} handleClose={handleClose}/>
+        <MenuList group={"Chat"} listOfMenus={listOfMenus.Chat} handleClose={handleClose}/>
+        <MenuList group={"CRM"} listOfMenus={listOfMenus.CRM} handleClose={handleClose}/>
       </Grid2>
         
       </DialogContent>

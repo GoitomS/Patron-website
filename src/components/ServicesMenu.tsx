@@ -115,9 +115,9 @@ import {
       >
         <DialogContent>
         <Grid2 container spacing={2}>
-          <MenuList group={"Industry"} listOfMenus={listOfServiceMenus.Industry} service={true}/>
-          <MenuList group={"Size"} listOfMenus={listOfServiceMenus.Size} service={true}/>
-          <MenuList group={"Events"} listOfMenus={listOfServiceMenus.Events} service={true}/>
+          <MenuList group={"Industry"} listOfMenus={listOfServiceMenus.Industry} service={true} something={"click"}/>
+          <MenuList group={"Size"} listOfMenus={listOfServiceMenus.Size} service={true} something={"click"}/>
+          <MenuList group={"Events"} listOfMenus={listOfServiceMenus.Events} service={true} something={"click"}/>
         </Grid2>
           
         </DialogContent>

@@ -207,7 +207,7 @@ const Navbar = () => {
         }}
         sx={{ zIndex: 10000 }}
       >
-        <Grid2 ><SwipeableDrawerContent/></Grid2>
+        <Grid2 ><SwipeableDrawerContent handleClose={handleClose}/></Grid2>
       </SwipeableDrawer>
       <ProductsMenu anchorEl={anchorEl} open={open} handleClose={handleClose} />
       <ServicesMenu anchorEl={anchorEl} open={openServices} handleClose={handleClose} />
