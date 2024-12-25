@@ -15,7 +15,14 @@ export default function Home() {
         <ProductTabsOnHomePage />
         <PatronCallToAction
           background="#A4DB08"
-          majorText={`Simplify the way you connect with Customers`}
+          majorText={<Typography
+                        fontSize={30}
+                        fontFamily={"Noto Sans"}
+                        fontWeight={800}
+                        sx={{ color: "white" }}
+                      >
+                        Simplify the way you connect with <span style={{color: "#081334"}}>Customers</span>
+                      </Typography>}
           minorText="Optimize your agents' productivity and customer experience, while increasing customer retention and satisfaction."
           buttonText="Request a Demo"
           buttonLink="/"

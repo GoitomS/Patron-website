@@ -73,8 +73,11 @@ const listOfTitlesWithDescriptions: ListOfTitlesWithDescriptionsTypes = {
         description: `Enhance your customer interactions with our Customer Records Management tool. Keep track of customer information effortlessly, ensuring personalized and efficient service that boosts satisfaction and loyalty.`
     },
 }
+interface selectedTabType {
+    selectedTab: string;
+}
 const ProductTabsOnHomePage = () => {
-  const [selectedTab, setSelectedTab] = React.useState("calls");
+  const [selectedTab, setSelectedTab] = React.useState<selectedTabType["selectedTab"]>("calls");
   const isMobile = useMediaQuery("(max-width: 700px)");
   return (
     <Grid2
@@ -176,12 +179,12 @@ const ProductTabsOnHomePage = () => {
               sx={{
                 textTransform: "none",
                 borderRadius: "5px",
-                backgroundColor: selectedTab === "CRM" && "#A4DB08",
+                backgroundColor: selectedTab === "CRM" ? "#A4DB08": "",
                 color: selectedTab === "CRM" ? "white" : "#081334",
                 boxShadow: "none",
                 "&:hover": {
                   boxShadow: "none",
-                  backgroundColor: selectedTab !== "CRM" && "#E8F1D1",
+                  backgroundColor: selectedTab !== "CRM" ? "#E8F1D1": "",
                 },
               }}
               onClick={() => {

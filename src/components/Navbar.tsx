@@ -10,7 +10,7 @@ import {
   Typography,
   SwipeableDrawer,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../../public/logo.svg";
 import styles from "../app/page.module.css";
 import Image from "next/image";
@@ -30,7 +30,11 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [openServices, setOpenServices] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
-
+  const [location, setLocations] =useState("")
+  useEffect(()=>{
+    setLocations(window.location.pathname.split("/")[1])
+  },[window.location])
+  console.log(location)
   const handleClose = () => {
     setAnchorEl(null);
     setOpen(false);
@@ -122,7 +126,7 @@ const Navbar = () => {
                       setSelected(1);
                     }}
                   >
-                    <Typography fontWeight={selected === 1 && "bold"}>
+                    <Typography fontWeight={selected === 1 ? "bold" : "normal"}>
                       Products
                     </Typography>
                     <KeyboardArrowDownIcon />
@@ -148,7 +152,7 @@ const Navbar = () => {
                       setOpenServices(true);
                     }}
                   >
-                    <Typography fontWeight={selected === 2 && "bold"}>
+                    <Typography fontWeight={selected === 2 ? "bold" : "normal"}>
                       Services
                     </Typography>
                     <KeyboardArrowDownIcon />
@@ -156,9 +160,9 @@ const Navbar = () => {
                 </IconButton>
               </Box>
               <Box sx={{ marginX: "5px" }}>
-                <IconButton sx={{ color: theme.palette.secondary.main }}>
+                <IconButton href="/prices-and-plans" sx={{ color: theme.palette.secondary.main }}>
                   <Grid2 display={"flex"} alignItems={"center"}>
-                    <Typography>Pricing</Typography>
+                    <Typography >Pricing</Typography>
                   </Grid2>
                 </IconButton>
               </Box>

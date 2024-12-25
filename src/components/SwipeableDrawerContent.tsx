@@ -190,25 +190,29 @@ const SwipeableDrawerContent = ({handleClose}) => {
       </Accordion>
       <Link
         style={{ marginTop: "10px", marginBottom: "10px", fontWeight: "bold" }}
-        href={"/"}
+        href={"/prices-and-plans"}
+        onClick={handleClose}
       >
         Pricing
       </Link>
       <Link
         style={{ marginTop: "10px", marginBottom: "10px", fontWeight: "bold" }}
         href={"/"}
+
       >
         Partners
       </Link>
       <Link
         style={{ marginTop: "10px", marginBottom: "10px", fontWeight: "bold" }}
         href={"/"}
+        onClick={handleClose}
       >
         Resources
       </Link>
       <Link
         style={{ marginTop: "10px", marginBottom: "10px", fontWeight: "bold" }}
         href={"/"}
+        onClick={handleClose}
       >
         About Us
       </Link>

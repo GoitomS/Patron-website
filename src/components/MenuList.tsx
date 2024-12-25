@@ -15,8 +15,13 @@ interface MenuListProps {
   group: string;
   isMobile?: boolean;
   handleClose?: () => void;
+  service?: boolean;
 }
-export const MenuListHeader = ({group, service = false}) => {
+interface MenuListHeaderProps {
+  group: string;
+  service?: boolean;
+}
+export const MenuListHeader = ({group, service = false}: MenuListHeaderProps) => {
 return (
     <Grid2 pb={1} mb={2} display={"flex"} alignItems={"center"} gap={1} >
         {group ==="CC" ? <HeadsetMicIcon sx={{color: theme.palette.primary.main}}/> : group ==="CM" ? <AssignmentIcon sx={{color: theme.palette.primary.main}}/> : group ==="Chat" ? <ChatRoundedIcon sx={{color: theme.palette.primary.main}}/> : group ==="CRM" ? <ExtensionIcon sx={{color: theme.palette.primary.main}}/> : ""}
@@ -24,7 +29,7 @@ return (
       </Grid2>
 )
 }
-const MenuList = ({ listOfMenus, group, service = false, isMobile = false, handleClose }) => {
+const MenuList = ({ listOfMenus, group, service = false, isMobile = false, handleClose }: MenuListProps) => {
   return (
     <Grid2 container display={"flex"} flexDirection={"column"}>
       {!isMobile && <Grid2 pb={1} mb={2} display={"flex"} alignItems={"center"} gap={1} sx={{borderBottom: "1px solid lightGrey"}}>

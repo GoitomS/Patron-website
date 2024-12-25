@@ -7,7 +7,7 @@ const HeaderWithPicture = () => {
     const isMobile = useMediaQuery("(max-width: 800px)");
   return (
     <Grid2 container sx={{
-      backgroundImage: !isMobile && "url('/homepage-banner-image.svg')",
+      backgroundImage: !isMobile ? "url('/homepage-banner-image.svg')": "",
       backgroundSize: "cover",
       backgroundPosition: "center",
       height: "560px",
@@ -22,7 +22,7 @@ const HeaderWithPicture = () => {
       position: "relative",
       overflow: "hidden",
       marginTop: "89px",
-      backgroundColor: isMobile && "#f9f9f9"
+      backgroundColor: isMobile ? "#f9f9f9": "",
     }}>
         <Grid2 display={"flex"} flexDirection={"column"} alignItems={!isMobile ? "flex-start": "center"} size={{xs: isMobile ? 12 : 6}}>
         <Typography fontSize={40} fontFamily={"Noto Sans"} fontWeight={200} sx={{color: "#081334"}} textAlign={!isMobile && "left"}>Enhance<br/><span style={{fontSize: 40, fontWeight: 800, fontFamily: 'Noto Sans', color: "#A4DB08"}}>Customer Experience</span><br/>at every touch-point</Typography>
@@ -40,8 +40,6 @@ const HeaderWithPicture = () => {
             </Grid2>
         </Grid2>
         </Grid2>
-        
-        
     </Grid2>
   )
 }

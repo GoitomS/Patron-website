@@ -4,7 +4,16 @@ import React from "react";
 import PatronButton from "./PatronButton";
 import Image from 'next/image';
 
-const PictureAndDescriptionSection = ({imageSrc, title, description, primaryButtonText, primaryButtonLink, secondaryButtonLink, altText}) => {
+interface PictureAndDescriptionSectionProps {
+  imageSrc: string;
+  title: string;
+  description: string;
+  primaryButtonText: string;
+  primaryButtonLink: string;
+  secondaryButtonLink: string;
+  altText: string;
+}
+const PictureAndDescriptionSection = ({imageSrc, title, description, primaryButtonText, primaryButtonLink, secondaryButtonLink, altText}: PictureAndDescriptionSectionProps) => {
   const isMobile = useMediaQuery("(max-width: 900px)");
   return (
     <Grid2
