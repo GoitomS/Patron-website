@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 interface PictureAndDescriptionSectionProps {
   imageSrc: string;
-  title: string;
+  title: React.ReactNode;
   description: string;
   primaryButtonText: string;
   primaryButtonLink: string;

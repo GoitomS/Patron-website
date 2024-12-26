@@ -5,7 +5,7 @@ import ProductTabsOnHomePage from "@/components/ProductTabsOnHomePage";
 import PatronCallToAction from "@/components/PatronCallToAction";
 import PictureAndDescriptionSection from "@/components/PictureAndDescriptionSection";
 import ResourcesSection from "@/components/ResourcesSection";
-import { articles } from "@/components/articles";
+import { listOfArticles } from "./resources/components/listOfArticles";
 
 export default function Home() {
   return (
@@ -46,7 +46,7 @@ export default function Home() {
           secondaryButtonLink={"/"}
           altText={"Woman holding a phone"}
         />
-        <ResourcesSection articles={articles} />
+        <ResourcesSection articles={listOfArticles} />
       </main>
     </div>
   );

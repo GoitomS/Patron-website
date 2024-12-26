@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import ArticleCard, { Article } from "./ArticleCard";
 import { Navigation, Pagination } from "swiper/modules";
+import { listOfArticles } from "@/app/resources/components/listOfArticles";
 
 
 interface ResourcesProps {
@@ -36,7 +37,7 @@ const ResourcesSection: React.FC<ResourcesProps> = ({ articles }) => {
           1280: { slidesPerView: 3 },
         }}
       >
-        {articles?.map((article, index) => (
+        {listOfArticles?.map((article, index) => (
           <SwiperSlide key={index}>
             <ArticleCard article={article} />
           </SwiperSlide>

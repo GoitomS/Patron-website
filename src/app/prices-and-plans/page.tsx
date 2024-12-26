@@ -1,11 +1,9 @@
 import ResourcesSection from "@/components/ResourcesSection";
-import { articles } from "@/components/articles";
+
 import PatronCallToAction from "@/components/PatronCallToAction";
-import PictureAndFeatures from "@/components/PictureAndFeatures";
 import { Typography } from "@mui/material";
-import FastLaunchSection from "../employee-experience/components/FastLaunchSection";
-import PictureAndDescriptionSection from "@/components/PictureAndDescriptionSection";
 import PricesAndPlansSection from "./components/PricesAndPlansSection";
+import { listOfArticles } from "../resources/components/listOfArticles";
 const contactCenterFeatures = [
   "Setup and launch in minutes",
   "Automatic Call Distribution (ACD)",
@@ -58,7 +56,7 @@ export default function PricesAndPlans() {
         
         {/* <DedicatedSupport/> */}
         
-        <ResourcesSection articles={articles} />
+        <ResourcesSection articles={listOfArticles} />
       </main>
     </div>
   );

@@ -1,5 +1,4 @@
 import ResourcesSection from "@/components/ResourcesSection";
-import { articles } from "@/components/articles";
 import PatronCallToAction from "@/components/PatronCallToAction";
 import PictureAndFeatures from "@/components/PictureAndFeatures";
 import { Typography } from "@mui/material";
@@ -7,6 +6,7 @@ import FastLaunchSection from "../employee-experience/components/FastLaunchSecti
 import CustomerExperienceHeader from "./components/CustomerExperienceHeader";
 import PictureAndDescriptionSection from "@/components/PictureAndDescriptionSection";
 import DedicatedSupport from "@/components/DedicatedSupport";
+import { listOfArticles } from "../resources/components/listOfArticles";
 const contactCenterFeatures = [
   "Setup and launch in minutes",
   "Automatic Call Distribution (ACD)",
@@ -181,7 +181,7 @@ export default function CustomerExperience() {
           buttonText={"Request a Demo"}
           buttonLink={"/"}
         />
-        <ResourcesSection articles={articles} />
+        <ResourcesSection articles={listOfArticles} />
       </main>
     </div>
   );

@@ -19,7 +19,7 @@ const JoinOurNewsLetter = () => {
     }
 
   return (
-    <Grid2 container display={"flex"} justifyContent={"center"} zIndex={10} mb={-7}>
+    <Grid2 container display={"flex"} justifyContent={"center"} zIndex={10} mb={-7} >
       <Grid2 size={{ xs: 12 }} display={"flex"} justifyContent={"center"} sx={{
             maxWidth: "900px",
             backgroundColor: "white",

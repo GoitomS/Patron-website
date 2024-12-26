@@ -4,16 +4,17 @@ import {
   CardContent,
   CardMedia,
   Typography,
-  Button,
   Grid2,
 } from "@mui/material";
 import Link from "next/link";
 
 export interface Article {
+  id: number | string;
   name: string;
-  article: string;
-  date_created: string; // Use ISO string format
-  image_url?: string; // Optional, in case an image URL is available
+  shortDescription: string;
+  date_created: string; 
+  image_url?: string;
+  alt_text?: string;
 }
 
 interface ArticleCardProps {
@@ -21,7 +22,7 @@ interface ArticleCardProps {
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
-  const { name, article: description, date_created, image_url } = article;
+  const { name, shortDescription: description, date_created, image_url, id } = article;
 
   return (
     <Card sx={{ maxWidth: 345, height: "500px" }}>
@@ -53,7 +54,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
           </Grid2>
           <Grid2 >
             <Link
-              href={"/blogs/article/" + name}
+              href={"/resources/" + id}
               style={{ textDecoration: "none", color: "#A4DB08" }}
             >
               Read More

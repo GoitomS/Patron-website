@@ -1,10 +1,10 @@
 import ResourcesSection from "@/components/ResourcesSection";
-import { articles } from "@/components/articles";
 import EmployeeExperienceHeader from "./components/EmployeeExperienceHeader";
 import PatronCallToAction from "@/components/PatronCallToAction";
 import FastLaunchSection from "./components/FastLaunchSection";
 import PictureAndFeatures from "@/components/PictureAndFeatures";
 import { Typography } from "@mui/material";
+import { listOfArticles } from "../resources/components/listOfArticles";
 const phoneSystemFeatures = [
   "New local or toll-free numbers",
   "Instant Number Porting",
@@ -89,7 +89,7 @@ export default function EmployeeExperience() {
           }
           pictureSide="left"
         />
-        <ResourcesSection articles={articles} />
+        <ResourcesSection articles={listOfArticles} />
       </main>
     </div>
   );

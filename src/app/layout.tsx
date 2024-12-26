@@ -24,6 +24,7 @@ export default function RootLayout(props) {
   return (
     <html lang="en">
       <head>
+      <meta name="color-scheme" content="light only"/>
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;1,100&family=Space+Mono&family=Tapestry&family=Work+Sans:wght@400;500;800&display=swap" rel="stylesheet"/>

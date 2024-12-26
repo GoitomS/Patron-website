@@ -34,7 +34,7 @@ const Navbar = () => {
   useEffect(()=>{
     setLocations(window.location.pathname.split("/")[1])
   },[window.location])
-  console.log(location)
+
   const handleClose = () => {
     setAnchorEl(null);
     setOpen(false);
@@ -167,14 +167,14 @@ const Navbar = () => {
                 </IconButton>
               </Box>
               <Box sx={{ marginX: "5px" }}>
-                <IconButton sx={{ color: theme.palette.secondary.main }}>
+                <IconButton  href="/partnership" sx={{ color: theme.palette.secondary.main }}>
                   <Grid2 display={"flex"} alignItems={"center"}>
                     <Typography>Partners</Typography>
                   </Grid2>
                 </IconButton>
               </Box>
               <Box sx={{ marginX: "5px" }}>
-                <IconButton sx={{ color: theme.palette.secondary.main }}>
+                <IconButton href="/resources" sx={{ color: theme.palette.secondary.main }}>
                   <Grid2 display={"flex"} alignItems={"center"}>
                     <Typography>Resources</Typography>
                   </Grid2>
