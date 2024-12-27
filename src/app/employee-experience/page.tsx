@@ -1,10 +1,10 @@
 import ResourcesSection from "@/components/ResourcesSection";
-import EmployeeExperienceHeader from "./components/EmployeeExperienceHeader";
 import PatronCallToAction from "@/components/PatronCallToAction";
 import FastLaunchSection from "./components/FastLaunchSection";
 import PictureAndFeatures from "@/components/PictureAndFeatures";
 import { Typography } from "@mui/material";
 import { listOfArticles } from "../resources/components/listOfArticles";
+import GlobalHeader from "@/components/GlobalHeader";
 const phoneSystemFeatures = [
   "New local or toll-free numbers",
   "Instant Number Porting",
@@ -22,7 +22,58 @@ export default function EmployeeExperience() {
   return (
     <div>
       <main>
-        <EmployeeExperienceHeader />
+        <GlobalHeader
+          backgroundImage="/background-image.png"
+          title={
+            <>
+              <Typography
+                       fontSize={26}
+                       fontFamily={"Noto Sans"}
+                       fontWeight={900}
+                       sx={{ color: "#081334", textAlign: {
+                    xs: "center",
+                    md: "left",
+                  } }}
+                       
+                      >
+                        patron<span style={{fontWeight: 400, color: "#A4DB08" }}>EX</span>
+                      </Typography>
+                      <Typography
+                        fontSize={40}
+                        fontFamily={"Noto Sans"}
+                        fontWeight={200}
+                        sx={{ color: "#081334", textAlign: {
+                    xs: "center",
+                    md: "left",
+                  } }}
+                        
+                      >
+                        Your trusted
+                        <br />
+                        <span
+                          style={{
+                            fontSize: 40,
+                            fontWeight: 800,
+                            fontFamily: "Noto Sans",
+                            color: "#A4DB08",
+                          }}
+                        >
+                          Business Phone
+                        </span>
+                        <br />
+                        system
+                      </Typography>
+
+            </>
+          }
+          description="Stay connected with your clients and team members effortlessly. \nTrusted performance, unparalleled clarity and convenience in every call."
+          sideImageUrl="/truck-driver-phone.png"
+          altText="Truck driver on a call"
+          primaryButton="Request a Demo"
+          secondaryButton="Contact Sales"
+          primaryLink="/request-demo"
+          secondaryLink="/contact-sales"
+        />
         <PatronCallToAction
           background={"#A4DB08"}
           majorText={

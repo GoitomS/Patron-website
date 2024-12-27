@@ -3,15 +3,15 @@ import React from "react";
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 interface PatronButtonProps {
   variant: "contained" | "outlined" | "text";
-  color: "green" | "darkBlue";
+  color?: "green" | "darkBlue";
   name: string;
   link: string;
-  icon: string;
+  icon?: string;
 }
 const listOfIcons = {
     video: <PlayCircleOutlineIcon sx={{marginRight: "5px"}}/>
 }
-const PatronButton = ({ variant, color, name, link, icon = "" }: PatronButtonProps) => {
+const PatronButton = ({ variant, color = "darkBlue", name, link, icon = "" }: PatronButtonProps) => {
   return (
     <Button
       variant={variant}

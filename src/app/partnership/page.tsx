@@ -1,16 +1,52 @@
 import ResourcesSection from "@/components/ResourcesSection";
 import PatronCallToAction from "@/components/PatronCallToAction";
 import { Typography } from "@mui/material";
-import PartnershipHeader from "./components/PartnershipHeader";
 import PictureAndDescriptionSection from "@/components/PictureAndDescriptionSection";
 import { listOfArticles } from "../resources/components/listOfArticles";
+import GlobalHeader from "@/components/GlobalHeader";
 
 
 export default function Partnership() {
   return (
     <div>
       <main>
-        <PartnershipHeader />
+      <GlobalHeader
+          backgroundImage="/background-image.png"
+          title={
+            <>
+              <Typography
+                        fontSize={40}
+                        fontFamily={"Noto Sans"}
+                        fontWeight={200}
+                        sx={{ color: "#081334", textAlign: {
+                          xs: 'center',
+                          md: 'left',
+                        }}}
+                        
+                      >
+                        {`Let's build`}
+          <br />
+          <span
+            style={{
+              fontSize: 40,
+              fontWeight: 800,
+              fontFamily: "Noto Sans",
+              color: "#A4DB08",
+            }}
+          >
+            Success
+          </span>
+          <br />
+          together
+                      </Typography>
+
+            </>
+          }
+          description=" Partner with us, gain access to cutting-edge solutions, innovative tools, and a shared vision for delivering exceptional value to customers. \nLet's grow together!"
+          sideImageUrl="/partnership.png"
+          altText="Partnership"
+          primaryButton=""
+        />
         <PatronCallToAction
           background={"#A4DB08"}
           majorText={

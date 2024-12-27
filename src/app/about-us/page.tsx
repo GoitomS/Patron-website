@@ -3,15 +3,40 @@ import PatronCallToAction from "@/components/PatronCallToAction";
 import { Grid2, Typography } from "@mui/material";
 import PictureAndDescriptionSection from "@/components/PictureAndDescriptionSection";
 import { listOfArticles } from "../resources/components/listOfArticles";
-import AboutUsHeader from "./components/AboutUsHeader";
 import TipsAndUpdatesOutlinedIcon from "@mui/icons-material/TipsAndUpdatesOutlined";
 import HandshakeOutlinedIcon from "@mui/icons-material/HandshakeOutlined";
 import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
+import GlobalHeader from "@/components/GlobalHeader";
 export default function AboutUs() {
   return (
     <div>
       <main>
-        <AboutUsHeader />
+        <GlobalHeader backgroundImage="/background-image.png" title={<Typography
+                      fontSize={40}
+                      fontFamily={"Noto Sans"}
+                      fontWeight={200}
+                      sx={{ color: "#081334", textAlign: {
+                        xs: 'center',
+                        md: 'left',
+                      }}}
+                    >
+                      {`Discover Our`}
+                      <br />
+                      <span
+                        style={{
+                          fontSize: 40,
+                          fontWeight: 800,
+                          fontFamily: "Noto Sans",
+                          color: "#A4DB08",
+                        }}
+                      >
+                        Journey and Vision
+                      </span>
+                    </Typography>} 
+                    description="Join us as we continue to push the boundaries and shape the future together."
+                    sideImageUrl="/about-us-header.png"
+                    altText="About Us Image"
+                    />
         <PatronCallToAction
           background={"#081334"}
           majorText={

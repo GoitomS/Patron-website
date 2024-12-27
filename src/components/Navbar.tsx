@@ -6,11 +6,10 @@ import {
   Toolbar,
   IconButton,
   Grid2,
-  useMediaQuery,
   Typography,
   SwipeableDrawer,
 } from "@mui/material";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import logo from "../../public/logo.svg";
 import styles from "../app/page.module.css";
 import Image from "next/image";
@@ -25,16 +24,11 @@ import ServicesMenu from "./ServicesMenu";
 import SwipeableDrawerContent from "./SwipeableDrawerContent";
 import Link from "next/link";
 const Navbar = () => {
-  const isMobile = useMediaQuery("(max-width: 900px)");
+
   const [selected, setSelected] = useState(0);
   const [open, setOpen] = useState(false);
   const [openServices, setOpenServices] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
-  const [location, setLocations] =useState("")
-  useEffect(()=>{
-    setLocations(window.location.pathname.split("/")[1])
-  },[window.location])
-
   const handleClose = () => {
     setAnchorEl(null);
     setOpen(false);
@@ -106,8 +100,7 @@ const Navbar = () => {
             </Box>
             </Link>
           </Box>
-          {!isMobile && (
-            <Grid2 display={"flex"} mr={8}>
+          <Grid2 display={{xs: "none", md: "flex"}} mr={8}>
               <Box sx={{ marginX: "5px" }}>
                 <IconButton
                   sx={{
@@ -120,8 +113,7 @@ const Navbar = () => {
                   <Grid2
                     display={"flex"}
                     alignItems={"center"}
-                    onClick={(e: React.MouseEvent<HTMLElement>) => {
-                        setAnchorEl(e.currentTarget);
+                    onClick={() => {
                         setOpen(true)
                       setSelected(1);
                     }}
@@ -188,16 +180,14 @@ const Navbar = () => {
                 </IconButton>
               </Box>
             </Grid2>
-          )}
-          {isMobile && (
             <IconButton
               onClick={() => {
                 setSelected(3);
               }}
+              sx={{display: {xs: "block", md: "none"}}}
             >
               <MenuIcon sx={{ width: "25px" }} />
             </IconButton>
-          )}
         </Toolbar>
       </AppBar>
       <SwipeableDrawer

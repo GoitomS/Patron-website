@@ -4,13 +4,49 @@ import { Grid2, Typography } from "@mui/material";
 import PictureAndDescriptionSection from "@/components/PictureAndDescriptionSection";
 import { listOfArticles } from "./components/listOfArticles";
 import ArticleCard from "@/components/ArticleCard";
-import ResourcesHeader from "./components/ResourcesHeader";
+import GlobalHeader from "@/components/GlobalHeader";
 
 export default function Resources() {
   return (
     <div>
       <main>
-        <ResourcesHeader/>
+      <GlobalHeader
+          backgroundImage="/background-image.png"
+          title={
+            <>
+              <Typography
+                        fontSize={40}
+                        fontFamily={"Noto Sans"}
+                        fontWeight={200}
+                        sx={{ color: "#081334", textAlign: {
+                          xs: 'center',
+                          md: 'left',
+                        }}}
+                        
+                      >
+                        {`Discover a`}
+                        <br />
+                        <span
+                          style={{
+                            fontSize: 40,
+                            fontWeight: 800,
+                            fontFamily: "Noto Sans",
+                            color: "#A4DB08",
+                          }}
+                        >
+                          Wealth
+                        </span>
+                          <br />
+                          of Knowledge
+                      </Typography>
+
+            </>
+          }
+          description="Access our curated collection of expert insights, practical tools, and essential guides to empower your journey."
+          sideImageUrl="/resources.png"
+          altText="Resources Image"
+          primaryButton=""
+        />
         <Grid2 container display={"flex"} justifyContent={"center"} py={10} bgcolor={"#f9f9f9"}>
           <Grid2
             display={"flex"}

@@ -3,10 +3,9 @@ import PatronCallToAction from "@/components/PatronCallToAction";
 import PictureAndFeatures from "@/components/PictureAndFeatures";
 import { Typography } from "@mui/material";
 import FastLaunchSection from "../employee-experience/components/FastLaunchSection";
-import CustomerExperienceHeader from "./components/CustomerExperienceHeader";
 import PictureAndDescriptionSection from "@/components/PictureAndDescriptionSection";
-import DedicatedSupport from "@/components/DedicatedSupport";
 import { listOfArticles } from "../resources/components/listOfArticles";
+import GlobalHeader from "@/components/GlobalHeader";
 const contactCenterFeatures = [
   "Setup and launch in minutes",
   "Automatic Call Distribution (ACD)",
@@ -36,7 +35,57 @@ export default function CustomerExperience() {
   return (
     <div>
       <main>
-        <CustomerExperienceHeader />
+        <GlobalHeader
+          backgroundImage="/background-image.png"
+          title={
+            <>
+              <Typography
+                fontSize={26}
+                fontFamily={"Noto Sans"}
+                fontWeight={900}
+                sx={{
+                  color: "#081334",
+                  textAlign: {
+                    xs: "center",
+                    md: "left",
+                  },
+                }}
+              >
+                patron
+                <span style={{ fontWeight: 400, color: "#A4DB08" }}>CC</span>
+              </Typography>
+              <Typography
+                fontSize={40}
+                fontFamily={"Noto Sans"}
+                fontWeight={200}
+                sx={{ color: "#081334", textAlign: { xs: "center", md: "left" } }}
+              >
+                Omnichannel Cloud
+                <br />
+                <span
+                  style={{
+                    fontSize: 40,
+                    fontWeight: 800,
+                    fontFamily: "Noto Sans",
+                    color: "#A4DB08",
+                  }}
+                >
+                  Contact Center
+                </span>
+                <br />
+                Solution
+              </Typography>
+
+            </>
+          }
+          description="Our innovative omnichannel contact center solution, ensures that your customers receive exceptional service, fostering loyalty and satisfaction. With seamless integrations and advanced features, we help you create a customer journey that stands out!"
+          sideImageUrl="/customer-experience-header.png"
+          altText="Customer Experience Header"
+          primaryButton="View Prices and Plans"
+          secondaryButton="Contact Sales"
+          primaryLink="/prices-and-plans"
+          secondaryLink="/contact-sales"
+        />
         <PatronCallToAction
           background={"#A4DB08"}
           majorText={
@@ -153,7 +202,10 @@ export default function CustomerExperience() {
               fontWeight={800}
               sx={{ color: "#081334" }}
             >
-              Get a<br/><span style={{ color: "#A4DB08" }}>360 degree view</span><br/>of Customers
+              Get a<br />
+              <span style={{ color: "#A4DB08" }}>360 degree view</span>
+              <br />
+              of Customers
             </Typography>
           }
           description={`Gain unparalleled insights into your customers with our platform. Centralize data from every touchpoint—purchase history, feedback, support interactions, and more. Our intuitive tools enable you to analyze customer behavior, personalize experiences, and anticipate needs with precision. Stay ahead of the competition by making data-driven decisions that build trust and loyalty. With a complete customer profile at your fingertips, you'll transform the way you engage, delight, and retain your customers, ensuring every interaction leaves a lasting impression. Start delivering exceptional experiences today!`}
