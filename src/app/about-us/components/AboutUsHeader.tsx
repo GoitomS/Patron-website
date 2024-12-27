@@ -1,6 +1,6 @@
 "use client";
-import PatronButton from "@/components/PatronButton";
 import { Grid2, Typography, useMediaQuery } from "@mui/material";
+import Image from "next/image";
 import React from "react";
 
 const AboutUsHeader = () => {
@@ -9,9 +9,7 @@ const AboutUsHeader = () => {
     <Grid2
       container
       sx={{
-        backgroundImage: !isMobile
-          ? "url('/about-us-header.svg')"
-          : "none",
+        backgroundImage: !isMobile ? "url('/background-image.png')" : "none",
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "560px",
@@ -19,7 +17,7 @@ const AboutUsHeader = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        flexDirection: "column",
+        // flexDirection: "column",
         color: "black",
         textAlign: "center",
         padding: "20px",
@@ -30,50 +28,67 @@ const AboutUsHeader = () => {
       }}
     >
       <Grid2
+        size={{ xs: 12 }}
         display={"flex"}
-        flexDirection={"column"}
-        alignItems={!isMobile ? "flex-start" : "center"}
-        size={{ xs: isMobile ? 12 : 6 }}
+        alignItems={"center"}
+        justifyContent={"center"}
+        sx={{ maxWidth: 900 }}
+        mx={4}
       >
+        <Grid2 container>
+          <Grid2
+            display={"flex"}
+            flexDirection={"column"}
+            alignItems={!isMobile ? "flex-start" : "center"}
+            size={{ xs: isMobile ? 12 : 7 }}
 
-        <Typography
-          fontSize={40}
-          fontFamily={"Noto Sans"}
-          fontWeight={200}
-          sx={{ color: "#081334" }}
-          textAlign={!isMobile ? "left" : "center"}
-        >
-          {`Discover Our`}
-          <br />
-          <span
-            style={{
-              fontSize: 40,
-              fontWeight: 800,
-              fontFamily: "Noto Sans",
-              color: "#A4DB08",
-            }}
           >
-            Journey and Vision
-          </span>
-
-        </Typography>
-      </Grid2>
-      <Grid2
-        display={"flex"}
-        flexDirection={"column"}
-        alignItems={!isMobile ? "flex-start" : "center"}
-        size={{ xs: isMobile ? 12 : 6 }}
-      >
-        <Typography
-          textAlign={!isMobile ? "left" : "center"}
-          sx={{ color: "grey", maxWidth: "350px" }}
-          fontFamily={"Noto Sans"}
-          fontWeight={300}
-        >
-{`Join us as we continue to push the boundaries and shape the future together.`}
-        </Typography>
-        <Grid2 display={"flex"} mt={4} gap={3}>
+            <Typography
+              fontSize={40}
+              fontFamily={"Noto Sans"}
+              fontWeight={200}
+              sx={{ color: "#081334"}}
+              textAlign={!isMobile ? "left" : "center"}
+            >
+              {`Discover Our`}
+              <br />
+              <span
+                style={{
+                  fontSize: 40,
+                  fontWeight: 800,
+                  fontFamily: "Noto Sans",
+                  color: "#A4DB08",
+                }}
+              >
+                Journey and Vision
+              </span>
+            </Typography>
+            <Typography
+              textAlign={!isMobile ? "left" : "center"}
+              sx={{ color: "grey" }}
+              fontFamily={"Noto Sans"}
+              fontWeight={300}
+            >
+              {`Join us as we continue to push the boundaries and shape the future together.`}
+            </Typography>
+          </Grid2>
         </Grid2>
+
+        {!isMobile && (
+          <Grid2
+            display={"flex"}
+            flexDirection={"column"}
+            alignItems={!isMobile ? "flex-start" : "center"}
+            size={{ xs: isMobile ? 12 : 5 }}
+          >
+            <Image
+              src="/about-us-header.png"
+              alt="About Us Image"
+              width={300}
+              height={300}
+            />
+          </Grid2>
+        )}
       </Grid2>
     </Grid2>
   );

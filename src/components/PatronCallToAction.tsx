@@ -31,9 +31,9 @@ const PatronCallToAction = ({background, majorText, minorText, buttonText, butto
       {buttonText && <Grid2 size={{ xs: isMobile ? 10 : 6 }} ml={isMobile ? 0 : 3} mt={isMobile ? 3 : 0} textAlign={"center"}>
         <PatronButton color={background === "#081334" ? 'green' : 'darkBlue'} variant='contained' name={buttonText} link={buttonLink}/>
       </Grid2>}
-      <Grid2 size={{xs: 12}} sx={{maxWidth: "950px"}} mt={3}>
+      {additionalFeatures && <Grid2 size={{xs: 12}} sx={{maxWidth: "950px"}} mt={3}>
         {additionalFeatures}
-      </Grid2>
+      </Grid2>}
       </Grid2>
     </Grid2>
   )
