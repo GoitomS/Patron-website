@@ -211,7 +211,7 @@ const SwipeableDrawerContent = ({handleClose}) => {
       </Link>
       <Link
         style={{ marginTop: "10px", marginBottom: "10px", fontWeight: "bold" }}
-        href={"/"}
+        href={"/about-us"}
         onClick={handleClose}
       >
         About Us

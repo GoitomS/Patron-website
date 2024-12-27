@@ -181,7 +181,7 @@ const Navbar = () => {
                 </IconButton>
               </Box>
               <Box sx={{ marginX: "5px" }}>
-                <IconButton sx={{ color: theme.palette.secondary.main }}>
+                <IconButton href="/about-us" sx={{ color: theme.palette.secondary.main }}>
                   <Grid2 display={"flex"} alignItems={"center"}>
                     <Typography>About us</Typography>
                   </Grid2>
