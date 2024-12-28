@@ -28,7 +28,10 @@ const GlobalHeader = ({
     <Grid2
       container
       sx={{
-        backgroundImage: `url('${backgroundImage}')`,
+        backgroundImage: {
+            xs: 'none',
+            md: `url(${backgroundImage})`,
+        },
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "560px",
@@ -36,17 +39,16 @@ const GlobalHeader = ({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        // flexDirection: "column",
         color: "black",
         textAlign: "center",
         padding: "20px",
         position: "relative",
         overflow: "hidden",
         marginTop: "89px",
-        // backgroundColor: {
-        //     xs: "#f9f9f9",
-        //     md: "none",
-        // },
+        backgroundColor: {
+            xs: "#f9f9f9",
+            md: "none",
+        },
       }}
     >
       <Grid2

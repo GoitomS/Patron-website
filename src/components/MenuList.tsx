@@ -10,7 +10,7 @@ interface MenuListProps {
   listOfMenus: {
     name: string;
     link: string;
-    description: string;
+    description?: string;
   }[];
   group: string;
   isMobile?: boolean;

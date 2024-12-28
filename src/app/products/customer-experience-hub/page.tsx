@@ -2,10 +2,10 @@ import ResourcesSection from "@/components/ResourcesSection";
 import PatronCallToAction from "@/components/PatronCallToAction";
 import PictureAndFeatures from "@/components/PictureAndFeatures";
 import { Typography } from "@mui/material";
-import FastLaunchSection from "../employee-experience/components/FastLaunchSection";
 import PictureAndDescriptionSection from "@/components/PictureAndDescriptionSection";
-import { listOfArticles } from "../resources/components/listOfArticles";
 import GlobalHeader from "@/components/GlobalHeader";
+import { listOfArticles } from "@/app/resources/components/listOfArticles";
+import FastLaunchSection from "@/components/FastLaunchSection";
 const contactCenterFeatures = [
   "Setup and launch in minutes",
   "Automatic Call Distribution (ACD)",

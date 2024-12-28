@@ -23,8 +23,9 @@ import ProductsMenu from "./ProductsMenu";
 import ServicesMenu from "./ServicesMenu";
 import SwipeableDrawerContent from "./SwipeableDrawerContent";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 const Navbar = () => {
-
+const pathname = usePathname();
   const [selected, setSelected] = useState(0);
   const [open, setOpen] = useState(false);
   const [openServices, setOpenServices] = useState(false);
@@ -35,6 +36,7 @@ const Navbar = () => {
     setOpenServices(false)
     setSelected(0)
   };
+  const page = pathname.split("/")[1];
   return (
     <>
       <AppBar
@@ -105,7 +107,7 @@ const Navbar = () => {
                 <IconButton
                   sx={{
                     color:
-                      selected === 1
+                      (selected === 1 || page === "products")
                         ? theme.palette.primary.main
                         : theme.palette.secondary.main,
                   }}
@@ -118,7 +120,7 @@ const Navbar = () => {
                       setSelected(1);
                     }}
                   >
-                    <Typography fontWeight={selected === 1 ? "bold" : "normal"}>
+                    <Typography fontWeight={(selected === 1 || page === "products") ? "bold" : "normal"}>
                       Products
                     </Typography>
                     <KeyboardArrowDownIcon />
@@ -131,7 +133,7 @@ const Navbar = () => {
                 <IconButton
                   sx={{
                     color:
-                      selected === 2
+                      (selected === 2 || page === "services")
                         ? theme.palette.primary.main
                         : theme.palette.secondary.main,
                   }}
@@ -144,7 +146,7 @@ const Navbar = () => {
                       setOpenServices(true);
                     }}
                   >
-                    <Typography fontWeight={selected === 2 ? "bold" : "normal"}>
+                    <Typography fontWeight={(selected === 2 || page === "services") ? "bold" : "normal"}>
                       Services
                     </Typography>
                     <KeyboardArrowDownIcon />
@@ -152,30 +154,50 @@ const Navbar = () => {
                 </IconButton>
               </Box>
               <Box sx={{ marginX: "5px" }}>
-                <IconButton href="/prices-and-plans" sx={{ color: theme.palette.secondary.main }}>
+                <IconButton href="/prices-and-plans" sx={{
+                    color:
+                      (page === "prices-and-plans")
+                        ? theme.palette.primary.main
+                        : theme.palette.secondary.main,
+                  }}>
                   <Grid2 display={"flex"} alignItems={"center"}>
-                    <Typography >Pricing</Typography>
+                    <Typography fontWeight={(page === "prices-and-plans") ? "bold" : "normal"}>Pricing</Typography>
                   </Grid2>
                 </IconButton>
               </Box>
               <Box sx={{ marginX: "5px" }}>
-                <IconButton  href="/partnership" sx={{ color: theme.palette.secondary.main }}>
+                <IconButton  href="/partnership" sx={{
+                    color:
+                      (page === "partnership")
+                        ? theme.palette.primary.main
+                        : theme.palette.secondary.main,
+                  }}>
                   <Grid2 display={"flex"} alignItems={"center"}>
-                    <Typography>Partners</Typography>
+                    <Typography fontWeight={(page === "partnership") ? "bold" : "normal"}>Partners</Typography>
                   </Grid2>
                 </IconButton>
               </Box>
               <Box sx={{ marginX: "5px" }}>
-                <IconButton href="/resources" sx={{ color: theme.palette.secondary.main }}>
+                <IconButton href="/resources" sx={{
+                    color:
+                      (page === "resources")
+                        ? theme.palette.primary.main
+                        : theme.palette.secondary.main,
+                  }}>
                   <Grid2 display={"flex"} alignItems={"center"}>
-                    <Typography>Resources</Typography>
+                    <Typography fontWeight={(page === "resources") ? "bold" : "normal"}>Resources</Typography>
                   </Grid2>
                 </IconButton>
               </Box>
               <Box sx={{ marginX: "5px" }}>
-                <IconButton href="/about-us" sx={{ color: theme.palette.secondary.main }}>
+                <IconButton href="/about-us" sx={{
+                    color:
+                      (page === "about-us")
+                        ? theme.palette.primary.main
+                        : theme.palette.secondary.main,
+                  }}>
                   <Grid2 display={"flex"} alignItems={"center"}>
-                    <Typography>About us</Typography>
+                    <Typography fontWeight={(page === "about-us") ? "bold" : "normal"}>About us</Typography>
                   </Grid2>
                 </IconButton>
               </Box>

@@ -50,7 +50,7 @@ export default function AboutUs() {
             </Typography>
           }
           minorText={
-            "We're not just a business; we're a community of passionate individuals dedicated to making a positive impact on the world. Our journey is a testament to the power of collaboration, innovation, and the pursuit of excellence. Join us on this exciting journey as we continue to shape the future of contact center solutions."
+            "We're not just a business; we're a community of passionate individuals dedicated to making a positive impact on the world. Our journey is a testament to the power of collaboration, innovation, and the pursuit of excellence. \nJoin us on this exciting journey as we continue to shape the future of customer Experience solutions."
           }
           buttonText={""}
           buttonLink={"/"}
@@ -67,12 +67,10 @@ export default function AboutUs() {
               {`Our story`}
             </Typography>
           }
-          description={`Become a Partner and combine the power of our contact center solutions with the resources, support and expertise of our team to win more business, expand your offerings, provide outsized value to clients and drive business growth.
-
-From the beginning, we set you up for success and our entire team (and fellow partners) are rooting for you every step of the way. \n- Training for your team to help you sell to prospective clients \n- Continuous support for your organization to ensure your clients receive seamless service \n- Guidance for onboarding new clients, adopting new features, and optimizing performance`}
-          primaryButtonText="Contact us"
-          primaryButtonLink="/"
-          secondaryButtonLink={"/"}
+          description={`Our journey began with a simple vision: to build a call center communication platform that would streamline customer interactions. With a small, dedicated team, we poured our passion and expertise into creating a solution that met the needs of our clients. As we listened to feedback and observed the evolving landscape, we realized the potential to do more. Through intentional collaboration and a shared belief in our vision, we transformed our platform into a comprehensive customer experience hub. Today, our product not only facilitates seamless communication but also enhances customer engagement and satisfaction. Our story is a testament to the power of a small team working together with purpose and determination to create something truly remarkable. We continue to innovate and grow, driven by the same spirit that started it all.`}
+          primaryButtonText=""
+          primaryButtonLink=""
+          secondaryButtonLink={""}
           altText={"characters building a puzzle"}
         />
         <PatronCallToAction

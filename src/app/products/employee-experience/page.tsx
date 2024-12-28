@@ -1,10 +1,10 @@
 import ResourcesSection from "@/components/ResourcesSection";
 import PatronCallToAction from "@/components/PatronCallToAction";
-import FastLaunchSection from "./components/FastLaunchSection";
 import PictureAndFeatures from "@/components/PictureAndFeatures";
 import { Typography } from "@mui/material";
-import { listOfArticles } from "../resources/components/listOfArticles";
 import GlobalHeader from "@/components/GlobalHeader";
+import { listOfArticles } from "@/app/resources/components/listOfArticles";
+import FastLaunchSection from "@/components/FastLaunchSection";
 const phoneSystemFeatures = [
   "New local or toll-free numbers",
   "Instant Number Porting",

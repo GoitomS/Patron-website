@@ -62,7 +62,7 @@ const PictureAndDescriptionSection = ({imageSrc, title, description, primaryButt
             {description}
           </Typography>
           <Grid2 display={"flex"} mt={5} gap={3} ml={3}>
-            <Grid2>
+            {primaryButtonText && <Grid2>
               <PatronButton
                 variant="contained"
                 name={primaryButtonText}
@@ -70,9 +70,9 @@ const PictureAndDescriptionSection = ({imageSrc, title, description, primaryButt
                 icon=""
                 link={primaryButtonLink}
               />
-            </Grid2>
+            </Grid2>}
 
-            <Grid2>
+            {secondaryButtonLink && <Grid2>
               <PatronButton
                 variant="outlined"
                 name={"Watch Video"}
@@ -80,7 +80,7 @@ const PictureAndDescriptionSection = ({imageSrc, title, description, primaryButt
                 icon={"video"}
                 link={secondaryButtonLink}
               />
-            </Grid2>
+            </Grid2>}
           </Grid2>
         </Grid2>
       </Grid2>

@@ -12,39 +12,39 @@ import {
       Industry: [
         {
           name: "Healthcare",
-          link: "/service1",
+          link: "/services/healthcare",
         },
         {
           name: "Government",
-          link: "/service2",
+          link: "/services/government",
         },
         {
           name: "IT Support",
-          link: "/service3",
+          link: "/services/it-support",
         },
         {
           name: "Trucking & Logistics",
-          link: "/service4",
+          link: "/services/trucking-and-logistics",
         },
         {
           name: "Financial Services",
-          link: "/service5",
+          link: "/services/financial-services",
         },
         {
           name: "Hospitality",
-          link: "/service6",
+          link: "/services/hospitality",
         },
         {
           name: "Automotive",
-          link: "/service7",
+          link: "/services/automotive",
         },
         {
           name: "Religious Instituution",
-          link: "/service8",
+          link: "/services/religious-institutions",
         },
         {
           name: "Nonprofit",
-          link: "/service9",
+          link: "/services/nonprofit",
         },
   
       ],
@@ -94,7 +94,6 @@ import {
   }));
   
   export const ServicesMenu = ({
-    anchorEl,
     open,
     handleClose,
   }: ServicesMenuProps) => {
@@ -115,9 +114,9 @@ import {
       >
         <DialogContent>
         <Grid2 container spacing={2}>
-          <MenuList group={"Industry"} listOfMenus={listOfServiceMenus.Industry} service={true} something={"click"}/>
-          <MenuList group={"Size"} listOfMenus={listOfServiceMenus.Size} service={true} something={"click"}/>
-          <MenuList group={"Events"} listOfMenus={listOfServiceMenus.Events} service={true} something={"click"}/>
+          <MenuList group={"Industry"} listOfMenus={listOfServiceMenus.Industry} service={true} handleClose={handleClose}/>
+          <MenuList group={"Size"} listOfMenus={listOfServiceMenus.Size} service={true} handleClose={handleClose}/>
+          <MenuList group={"Events"} listOfMenus={listOfServiceMenus.Events} service={true} handleClose={handleClose}/>
         </Grid2>
           
         </DialogContent>

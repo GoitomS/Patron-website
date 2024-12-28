@@ -12,49 +12,49 @@ export const listOfMenus = {
     CC: [
       {
         name: "Business Phone",
-        link: "/employee-experience",
+        link: "/products/employee-experience",
         description: "Seamlessly connect with clients and colleagues"
       },
       {
         name: "Call Center Solution",
-        link: "/customer-experience-hub",
+        link: "/products/customer-experience-hub",
         description: "Deliver exceptional support & streamline operations"
       },
       {
         name: "Robo-calls",
-        link: "/product2",
+        link: "/products/product2",
         description: "Automate your outreach"
       },
       {
-        name: " Call flow designer",
-        link: "/product2",
+        name: "Call flow designer",
+        link: "/products/product2",
         description: "Customize call paths & enhance customer interactions"
       },
       {
-        name: " Campaigns",
-        link: "/product2",
+        name: "Campaigns",
+        link: "/products/product2",
         description: "Drive engagement and achieve your goals"
       },
       {
-        name: " Dynamic IVR builder",
-        link: "/product2",
+        name: "Dynamic IVR builder",
+        link: "/products/product2",
         description: " User-friendly IVR builder"
       },
 
     ],
     CM: [
         {
-            name: " Workflow Automation",
+            name: "Workflow Automation",
             link: "/product1",
             description: "small description 1"
           },
           {
-            name: " Dynamic Forms",
+            name: "Dynamic Forms",
             link: "/product2",
             description: "small description 2"
           },
           {
-            name: " Help Desk Management",
+            name: "Help Desk Management",
             link: "/product2",
             description: "small description 2"
           },
@@ -76,7 +76,7 @@ export const listOfMenus = {
     ],
     Chat: [
         {
-            name: " Omni-Channel",
+            name: "Omni-Channel",
             link: "/product2",
             description: "small description 2"
           },
@@ -86,7 +86,7 @@ export const listOfMenus = {
             description: "small description 2"
           },
           {
-            name: " Integrations",
+            name: "Integrations",
             link: "/product2",
             description: "small description 2"
           },
@@ -98,7 +98,7 @@ export const listOfMenus = {
     ],
     CRM: [
         {
-            name: " Dynamic Data Capture",
+            name: "Dynamic Data Capture",
             link: "/product2",
             description: "small description 2"
           },
