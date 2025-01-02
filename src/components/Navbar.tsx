@@ -24,7 +24,6 @@ import ServicesMenu from "./ServicesMenu";
 import SwipeableDrawerContent from "./SwipeableDrawerContent";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import RequestDemoModal from "./RequestDemoModal";
 const Navbar = () => {
 const pathname = usePathname();
   const [selected, setSelected] = useState(0);

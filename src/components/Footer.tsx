@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Grid2, IconButton, Typography } from "@mui/material";
+import { Box, Grid2, Typography } from "@mui/material";
 import styles from "./Footer.module.css"; // Assuming you have a CSS module
 import Image from "next/image";
 import logo from "../../public/logo-white-text.svg";
@@ -35,7 +35,7 @@ const Footer: React.FC = () => (
             fontSize={"30px"}
             sx={{ color: "#A4DB08", marginTop: "40px", textAlign: "left" }}
           >
-            We're here to help!
+            We&apos;re here to help!
           </Typography>
           <Typography fontSize={"16px"} sx={{ color: "lightGrey", display: "flex", alignItems: "center" }}>
             <MailIcon sx={{color: "#A4DB08", marginRight: "10px"}}/> help@patron-cx.com

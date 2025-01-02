@@ -15,6 +15,7 @@ interface ResourcesProps {
 }
 
 const ResourcesSection: React.FC<ResourcesProps> = ({ articles }) => {
+  console.log(articles);
   return (
     <Box sx={{ padding: "20px", textAlign: "center", display: "flex", alignItems: "center", flexDirection: "column" }}>
       <Typography fontSize={30}

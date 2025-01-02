@@ -62,7 +62,7 @@ interface PricePlanCardProps {
 }
 
 const PricePlanCard = ({ selectedTab, plan }: PricePlanCardProps) => {
-const [users, setUsers] = React.useState<number>(10);
+// const [users, setUsers] = React.useState<number>(10);
   return (
     <Grid2
       container

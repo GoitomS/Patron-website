@@ -4,30 +4,6 @@ import PatronCallToAction from "@/components/PatronCallToAction";
 import { Typography } from "@mui/material";
 import PricesAndPlansSection from "./components/PricesAndPlansSection";
 import { listOfArticles } from "../resources/components/listOfArticles";
-const contactCenterFeatures = [
-  "Setup and launch in minutes",
-  "Automatic Call Distribution (ACD)",
-  "Call Detail Records (CDR)",
-  "Interactive Voice Response (IVR)",
-  "Call Recording",
-  "Call Whispering",
-  "Call Barging",
-  "Call spying",
-  "Built-in dynamic dialer",
-  "Inbound/Outbound",
-];
-const manageContactCenterFeatures = [
-  "Workforce management",
-  "Built-in CRM",
-  "Integrated Case Management",
-  "Outbound campaigns",
-  "Agent and Admin portals",
-  "Dynamic role & access configuration",
-  "User management",
-  "Dynamic queue management",
-  "Dashboards and Reports",
-  "Surveys",
-];
 
 export default function PricesAndPlans() {
   return (

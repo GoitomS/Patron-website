@@ -1,7 +1,6 @@
 import {
   Dialog,
   DialogContent,
-  DialogTitle,
   Grid2,
   Paper,
   styled,
@@ -120,14 +119,13 @@ interface ProductsMenuProps {
   handleClose: () => void;
 }
 
-const CustomPaper = styled(Paper)(({ theme }) => ({
+const CustomPaper = styled(Paper)(() => ({
   position: "absolute",
   top: "calc(-50% + 320px)",
   
 }));
 
 export const ProductsMenu = ({
-  anchorEl,
   open,
   handleClose,
 }: ProductsMenuProps) => {

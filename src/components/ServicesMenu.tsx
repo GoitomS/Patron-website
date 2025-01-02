@@ -87,7 +87,7 @@ import {
     handleClose: () => void;
   }
   
-  const CustomPaper = styled(Paper)(({ theme }) => ({
+  const CustomPaper = styled(Paper)(() => ({
     position: "absolute",
     top: "calc(-50% + 300px)",
     
