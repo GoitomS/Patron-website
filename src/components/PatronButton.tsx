@@ -7,11 +7,12 @@ interface PatronButtonProps {
   name: string;
   link: string;
   icon?: string;
+  handleClick?: () => void;
 }
 const listOfIcons = {
     video: <PlayCircleOutlineIcon sx={{marginRight: "5px"}}/>
 }
-const PatronButton = ({ variant, color = "darkBlue", name, link, icon = "" }: PatronButtonProps) => {
+const PatronButton = ({ variant, color = "darkBlue", name, link, icon = "", handleClick }: PatronButtonProps) => {
   return (
     <Button
       variant={variant}
@@ -28,6 +29,7 @@ const PatronButton = ({ variant, color = "darkBlue", name, link, icon = "" }: Pa
           backgroundColor: variant === "contained" ? (color === "green" ? "#8BAF28" : "#132D7D") : (color === "green" ? "#E8F1D1" : "#CCD5F4"),
         }
       }}
+      onClick={handleClick}
     >
       {icon && listOfIcons?.[icon]}{name}
     </Button>

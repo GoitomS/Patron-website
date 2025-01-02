@@ -24,10 +24,12 @@ import ServicesMenu from "./ServicesMenu";
 import SwipeableDrawerContent from "./SwipeableDrawerContent";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import RequestDemoModal from "./RequestDemoModal";
 const Navbar = () => {
 const pathname = usePathname();
   const [selected, setSelected] = useState(0);
   const [open, setOpen] = useState(false);
+  
   const [openServices, setOpenServices] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const handleClose = () => {
@@ -36,6 +38,7 @@ const pathname = usePathname();
     setOpenServices(false)
     setSelected(0)
   };
+
   const page = pathname.split("/")[1];
   return (
     <>
@@ -227,6 +230,7 @@ const pathname = usePathname();
       </SwipeableDrawer>
       <ProductsMenu anchorEl={anchorEl} open={open} handleClose={handleClose} />
       <ServicesMenu anchorEl={anchorEl} open={openServices} handleClose={handleClose} />
+    
     </>
   );
 };

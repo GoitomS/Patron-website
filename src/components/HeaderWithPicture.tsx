@@ -1,10 +1,16 @@
 'use client'
 import { Grid2, Typography, useMediaQuery } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import PatronButton from './PatronButton'
+import RequestDemoModal from './RequestDemoModal'
 
 const HeaderWithPicture = () => {
     const isMobile = useMediaQuery("(max-width: 800px)");
+    const [openModal, setOpenModal] = useState(false);
+  const handleRequestDemoModalClose = () =>{
+    setOpenModal(false)
+  }
+
   return (
     <Grid2 container sx={{
       backgroundImage: !isMobile ? "url('/homepage-banner-image.svg')": "",
@@ -32,7 +38,7 @@ const HeaderWithPicture = () => {
 
         <Grid2 display={"flex"} mt={4} gap={3}>
             <Grid2>
-                <PatronButton variant='contained' name={"Request a Demo"}/>
+                <PatronButton variant='contained' name={"Request a Demo"} handleClick={() => setOpenModal(true)}/>
             </Grid2>
             
             <Grid2>
@@ -40,6 +46,7 @@ const HeaderWithPicture = () => {
             </Grid2>
         </Grid2>
         </Grid2>
+        <RequestDemoModal open={openModal} handleClose={handleRequestDemoModalClose} />
     </Grid2>
   )
 }
