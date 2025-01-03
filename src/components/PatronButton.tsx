@@ -31,9 +31,8 @@ const PatronButton = ({ variant, color = "darkBlue", name, link, icon = "", hand
       }}
       onClick={handleClick}
     >
-      {icon && listOfIcons?.[icon]}{name}
+      {icon && icon in listOfIcons && listOfIcons[icon as keyof typeof listOfIcons]}{name}
     </Button>
   );
 };
-
 export default PatronButton;

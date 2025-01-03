@@ -8,7 +8,7 @@ interface sectionsType {
   imageUrl?: string;
 }
 interface Article {
-  id: number | string;
+  id: string;
   name: string;
   content: sectionsType[];
   image_url: string;

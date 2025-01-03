@@ -54,8 +54,11 @@ const isValidCompanyEmail = (email: string): boolean => {
   // Return true if domain is not in the free email providers list
   return !freeEmailDomains.includes(domain);
 };
-
-const RequestDemoModal = ({ open, handleClose }) => {
+interface RequestDemoModalProps {
+  open: boolean;
+  handleClose: () => void;
+}
+const RequestDemoModal = ({ open, handleClose }: RequestDemoModalProps) => {
   const [requestForm, setRequestForm] = React.useState({
     fullName: "",
     email: "",
@@ -68,12 +71,11 @@ const RequestDemoModal = ({ open, handleClose }) => {
   const [emailError, setEmailError] = React.useState<boolean>(false);
   const [phoneError, setPhoneError] = React.useState<boolean>(false);
 
-  const handlePhoneChange = (e) => {
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const phone = e.target.value;
     setRequestForm({...requestForm, phone: phone});
     setPhoneError(!isValidPhoneNumber(phone));
-  }
-  
+  }  
   const handleEmailChange = (e : React.ChangeEvent<HTMLInputElement>) => {
     const email = e.target.value;
     setRequestForm({ ...requestForm, email: email });

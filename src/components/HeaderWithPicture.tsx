@@ -31,18 +31,18 @@ const HeaderWithPicture = () => {
       backgroundColor: isMobile ? "#f9f9f9": "",
     }}>
         <Grid2 display={"flex"} flexDirection={"column"} alignItems={!isMobile ? "flex-start": "center"} size={{xs: isMobile ? 12 : 6}}>
-        <Typography fontSize={40} fontFamily={"Noto Sans"} fontWeight={200} sx={{color: "#081334"}} textAlign={!isMobile && "left"}>Enhance<br/><span style={{fontSize: 40, fontWeight: 800, fontFamily: 'Noto Sans', color: "#A4DB08"}}>Customer Experience</span><br/>at every touch-point</Typography>
+        <Typography fontSize={40} fontFamily={"Noto Sans"} fontWeight={200} sx={{color: "#081334", textAlign: !isMobile ? "left": ""}} >Enhance<br/><span style={{fontSize: 40, fontWeight: 800, fontFamily: 'Noto Sans', color: "#A4DB08"}}>Customer Experience</span><br/>at every touch-point</Typography>
         </Grid2>
         <Grid2 display={"flex"} flexDirection={"column"} alignItems={!isMobile ? "flex-start": "center"} size={{xs: isMobile ? 12 : 6}} >
         <Typography textAlign={!isMobile ? "left": "center"} sx={{color: "#081334", maxWidth: "350px"}}>Stay relevant by following industry trends. Be proactive, anticipate customer needs, and be accessible through convenient channels.</Typography>
 
         <Grid2 display={"flex"} mt={4} gap={3}>
             <Grid2>
-                <PatronButton variant='contained' name={"Request a Demo"} handleClick={() => setOpenModal(true)}/>
+                <PatronButton link='' variant='contained' name={"Request a Demo"} handleClick={() => setOpenModal(true)}/>
             </Grid2>
             
             <Grid2>
-            <PatronButton variant='outlined' name={"Contact Sales"}/>
+            <PatronButton link='' variant='outlined' name={"Contact Sales"}/>
             </Grid2>
         </Grid2>
         </Grid2>

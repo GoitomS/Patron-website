@@ -77,7 +77,7 @@ interface selectedTabType {
     selectedTab: string;
 }
 const ProductTabsOnHomePage = () => {
-  const [selectedTab, setSelectedTab] = React.useState<selectedTabType["selectedTab"]>("calls");
+  const [selectedTab, setSelectedTab] = React.useState<keyof ListOfTitlesWithDescriptionsTypes>("calls");
   const isMobile = useMediaQuery("(max-width: 700px)");
   return (
     <Grid2
@@ -124,12 +124,12 @@ const ProductTabsOnHomePage = () => {
               sx={{
                 textTransform: "none",
                 borderRadius: "5px",
-                backgroundColor: selectedTab === "calls" && "#A4DB08",
+                backgroundColor: selectedTab === "calls" ? "#A4DB08" : "transparent",
                 color: selectedTab === "calls" ? "white" : "#081334",
                 boxShadow: "none",
                 "&:hover": {
                   boxShadow: "none",
-                  backgroundColor: selectedTab !== "calls" && "#E8F1D1",
+                  backgroundColor: selectedTab !== "calls" ? "#E8F1D1" : "#A4DB08",
                 },
               }}
               onClick={() => {
@@ -142,12 +142,12 @@ const ProductTabsOnHomePage = () => {
               sx={{
                 textTransform: "none",
                 borderRadius: "5px",
-                backgroundColor: selectedTab === "chats" && "#A4DB08",
+                backgroundColor: selectedTab === "chats" ? "#A4DB08" : "transparent",
                 color: selectedTab === "chats" ? "white" : "#081334",
                 boxShadow: "none",
                 "&:hover": {
                   boxShadow: "none",
-                  backgroundColor: selectedTab !== "chats" && "#E8F1D1",
+                  backgroundColor: selectedTab !== "chats" ? "#E8F1D1" : "#A4DB08",
                 },
               }}
               onClick={() => {
@@ -160,13 +160,12 @@ const ProductTabsOnHomePage = () => {
               sx={{
                 textTransform: "none",
                 borderRadius: "5px",
-                backgroundColor: selectedTab === "caseManagement" && "#A4DB08",
+                backgroundColor: selectedTab === "caseManagement" ? "#A4DB08" : "transparent",
                 color: selectedTab === "caseManagement" ? "white" : "#081334",
                 boxShadow: "none",
                 "&:hover": {
                   boxShadow: "none",
-                  backgroundColor:
-                    selectedTab !== "caseManagement" && "#E8F1D1",
+                  backgroundColor: selectedTab !== "caseManagement" ? "#E8F1D1" : "#A4DB08",
                 },
               }}
               onClick={() => {
@@ -179,12 +178,12 @@ const ProductTabsOnHomePage = () => {
               sx={{
                 textTransform: "none",
                 borderRadius: "5px",
-                backgroundColor: selectedTab === "CRM" ? "#A4DB08": "",
+                backgroundColor: selectedTab === "CRM" ? "#A4DB08" : "transparent",
                 color: selectedTab === "CRM" ? "white" : "#081334",
                 boxShadow: "none",
                 "&:hover": {
                   boxShadow: "none",
-                  backgroundColor: selectedTab !== "CRM" ? "#E8F1D1": "",
+                  backgroundColor: selectedTab !== "CRM" ? "#E8F1D1" : "#A4DB08",
                 },
               }}
               onClick={() => {
@@ -223,7 +222,7 @@ const ProductTabsOnHomePage = () => {
                 mt={5}
                 spacing={3}
               >
-                {listOfCallFeatures?.[selectedTab].map((feature, index) => {
+                {listOfCallFeatures[selectedTab].map((feature, index) => {
                   return (
                     <Grid2
                       key={index}
@@ -241,11 +240,11 @@ const ProductTabsOnHomePage = () => {
             </Grid2>
             <Grid2 display={"flex"} mt={5} gap={3} ml={3}>
               <Grid2>
-                <PatronButton variant="contained" name={"View Details"} />
+                <PatronButton link="" variant="contained" name={"View Details"} />
               </Grid2>
 
               <Grid2>
-                <PatronButton variant="outlined" name={"Watch Video"} icon={"video"} />
+                <PatronButton link="" variant="outlined" name={"Watch Video"} icon={"video"} />
               </Grid2>
             </Grid2>
           </Grid2>
@@ -256,6 +255,5 @@ const ProductTabsOnHomePage = () => {
       </Grid2>
     </Grid2>
   );
-};
 
-export default ProductTabsOnHomePage;
+};export default ProductTabsOnHomePage;

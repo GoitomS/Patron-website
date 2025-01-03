@@ -38,7 +38,7 @@ const pathname = usePathname();
     setSelected(0)
   };
 
-  const page = pathname.split("/")[1];
+  const page = pathname?.split("/")[1];
   return (
     <>
       <AppBar

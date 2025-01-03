@@ -13,8 +13,10 @@ import { listOfMenus } from "./ProductsMenu";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { listOfServiceMenus } from "./ServicesMenu";
 import Link from "next/link";
-
-const SwipeableDrawerContent = ({handleClose}) => {
+interface SwipeableDrawerContentProps {
+  handleClose: () => void;
+}
+const SwipeableDrawerContent = ({handleClose}: SwipeableDrawerContentProps) => {
   const [expanded, setExpanded] = React.useState<string | false>(false);
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
